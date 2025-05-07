@@ -123,6 +123,40 @@ app.get('/api/waitlist', authenticateToken, async (req, res) => {
   }
 });
 
+// Public Waitlist API Endpoint
+app.post('/api/waitlist', async (req, res) => {
+  const { firstname, lastname, role, province, city, email, phone, nickname } = req.body;
+
+  // Honeypot Field Check
+  if (nickname) {
+    return res.status(400).json({ message: "Bot detected" });
+  }
+
+  // Basic Validation
+  if (!firstname.trim() || !lastname.trim()) {
+    return res.status(400).json({ message: 'Name is required' });
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ message: 'Invalid email' });
+  }
+
+  const phoneRegex = /^\d{10}$/;
+  if (!phoneRegex.test(phone)) {
+    return res.status(400).json({ message: 'Invalid phone number' });
+  }
+
+  try {
+    const entry = new WaitlistEntry({ firstname, lastname, role, province, city, email, phone });
+    await entry.save();
+    res.status(201).json({ message: "Waitlist entry saved successfully" });
+  } catch (error) {
+    console.error("Error saving waitlist entry:", error);
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
 // Admin Login Endpoint
 app.post('/api/login', (req, res) => {
   const { email, password } = req.body;
