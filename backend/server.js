@@ -150,6 +150,20 @@ app.post('/api/waitlist', async (req, res) => {
   try {
     const entry = new WaitlistEntry({ firstname, lastname, role, province, city, email, phone });
     await entry.save();
+
+    // Send Confirmation Email
+    await transporter.sendMail({
+      from: `"JunkCycle" <${process.env.EMAIL_USER}>`,
+      to: email,
+      subject: 'Thanks for joining the JunkCycle Waitlist!',
+      html: emailTemplate(firstname),
+      attachments: [{
+        filename: 'logo.svg',
+        path: path.join(__dirname, 'assets', 'logo.svg'),
+        cid: 'logo'
+      }]
+    });
+
     res.status(201).json({ message: "Waitlist entry saved successfully" });
   } catch (error) {
     console.error("Error saving waitlist entry:", error);
