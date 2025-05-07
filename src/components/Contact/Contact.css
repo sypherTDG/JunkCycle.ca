@@ -1,0 +1,131 @@
+.contact{
+    margin: 80px auto;
+    width: 90%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.contact-info{
+    flex-basis: 48%;
+    color: #131518;
+}
+.contact-info h3{
+    color: #047857;
+    font-weight: 500;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.contact-info h3 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.contact-info p{
+    max-width: 450px;
+    line-height: 1.3;
+}
+.contact-info ul li{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.contact-info ul li img{
+    width: 25px;
+    margin-right: 10px; ;
+}
+.contact-info ul li a{
+    color: #131518;
+}
+.contact form input, .contact form textarea, .contact form select{
+    display: block;
+    width: 100%;
+    background-color: #a7f3d03a;
+    padding: 15px;
+    border: 0;
+    outline: 0;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    resize: none;
+}
+.contact-info span{
+    display: block;
+    margin: 20px 0;
+}
+
+
+/* media query   */
+@media (max-width: 768px) {
+    .contact{
+        margin: 40px auto;
+        display: block ;
+    }
+    .contact-info{
+        padding: 20px;
+    }
+    .contact-info h3{
+        font-size: 20px;
+    }
+    .contact-info p{
+        font-size: 15px;
+        max-width: 100%;
+    }
+    .contact-info ul li{
+        margin: 10px 0;
+        font-size: 15px;
+    }
+    .contact-info ul li img{
+        width: 20px;
+    }
+    .title h2{
+        font-size: 25px;
+    }
+    .title p{
+        font-size: 15px;
+    }
+    .contact form input, .contact form textarea, .contact form select{
+        padding: 10px;
+        font-size: 15px;
+    }
+    .contact form input[type="submit"]{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 500px) {
+    .contact{
+        display: block ;
+    }
+    .contact-info{
+        padding: 10px;
+    }
+    .contact-info h3{
+        font-size: 20px;
+    }
+    .contact-info p{
+        font-size: 13px;
+        max-width: 100%;
+    }
+    .contact-info ul li{
+        margin: 10px 0;
+        font-size: 13px;
+    }
+    .contact-info ul li img{
+        width: 20px;
+    }
+    .title h2{
+        font-size: 20px;
+    }
+    .title p{
+        font-size: 13px;
+    }
+    .contact form input, .contact form textarea, .contact form select{
+        padding: 10px;
+        font-size: 13px;
+    }
+    .contact form input[type="submit"]{
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+}

@@ -1,0 +1,126 @@
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    /* background: linear-gradient( rgba(17, 32, 27, 0.7)), url('../../assets/Hero.png'); */
+    background: linear-gradient(to bottom, #a7f3d0, #ffffff);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: #36392d;
+    /* justify-content: left; */
+    align-items: center;
+
+}
+
+.hero-content{
+    text-align: left;
+    max-width: 800px;
+}
+.hero-content .header1{
+    font-size: 60px;
+    font-weight: 900;
+
+}
+.hero-content .header2{
+    font-size: 65px;
+    font-weight: 900;
+    color: #059669;
+}
+.hero-content .header3{
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.hero-content p{
+    max-width: 700px;
+    font-size: 25px;
+    margin-bottom: 1.5rem;   
+    color: #4b5563; /* Dark gray */
+    line-height: 1.5;
+}
+.hero-content .ps{
+    color: #4b5563; 
+    font-size: 15px;
+    text-align: left;
+    margin-top: 2rem;
+}
+.hero-content .ps2{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2rem;
+}
+.hero-content .btn{
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 3%;
+}
+.hero-content button:hover{
+    background-color: #1B5E20; /* Darker green */
+}
+.hero-content button:active{
+    background-color: #388E3C; /* Even darker green */
+}
+.hero-content button:focus{
+    outline: none;
+}
+
+/* media query */
+@media (max-width: 850px) {
+    .hero-content .header1{
+        font-size: 45px;
+    }
+    .hero-content .header2{
+        font-size: 50px;
+    }
+    .hero-content .header3{
+        font-size: 45px;
+    }
+    .hero-content p{
+        font-size: 20px;
+    }
+    .hero-content .ps{
+        font-size: 12px;
+    }
+}
+@media (max-width: 550px) {
+    .hero-content .header1{
+        font-size: 30px;
+        max-width: 400px;
+    }
+    .hero-content .header2{
+        font-size: 30px;
+        max-width: 400px;
+
+    }
+    .hero-content .header3{
+        font-size: 30px;
+        max-width: 400px;
+    }
+    .hero-content p{
+        font-size: 15px;
+        margin: 16px auto 30px ;
+    }
+    .hero-content .ps{
+        font-size: 12px;
+    }
+    .hero-content .btn{
+        padding: 10px 1cqh;
+        font-size: 13px;
+    }
+    .hero-content .btnn{
+        padding: 10px 10px;
+        font-size: 13px;
+    }
+    .hero-content .btn img{
+        width: 15px;
+        margin-left: 10px;
+      }
+      .hero-content .btnn img{
+        width: 15px;
+        margin-left: 10px;
+      }
+}

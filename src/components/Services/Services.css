@@ -1,0 +1,181 @@
+.services{
+    margin: 80px auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /*Allows items to wrap to the next line if there's not enough space */
+    gap: 20px; /* Adds space between items */
+    /* justify-content: center; Centers items on the next line */
+
+}
+
+.services-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: #eeeeee47;
+}
+.services-main h3{
+    font-weight: 500;
+    font-size: 18px;
+    color: #059669;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+.services-main h2{
+    font-size: 35px;
+    font-weight: 700;
+    color: #047857;
+    margin: 10px 0;
+}
+.service {
+    flex-basis: 31%; /* Each service takes up 30% of the container's width */
+    position: relative;
+}
+.caption{
+    width: 100%;
+    height: 40vh;
+    display:flex;
+    flex-direction: column;
+    padding: 10%;
+    align-items: left;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+
+    /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    /* background-color: rgba(0, 0, 0, 0.3); Semi-transparent black */
+    /* opacity: 0;
+    padding-top: 100%;
+    transition: opacity 0.3s ease-in-out, padding-top 0.3s ease-in-out; */
+}
+.caption .icon{
+    width: 60px;
+    margin-bottom: 10px;
+}
+.caption .icon2{
+    width: 53px;
+    margin-bottom: 10px;
+}
+.caption .p1{
+    color: #4b5563; 
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 5%;
+}
+.caption .pp{
+    color: #4b5563; 
+    font-size: 18px;
+    text-align: left;
+}
+.service:hover .caption{
+    opacity: 10;
+    padding-top: 10%;
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+.service:hover img{
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+
+/* .service img{
+    width: 90%;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover; Use 'cover' to fill the container while maintaining aspect ratio
+    Setting flex-basis to 30% ensures that each service takes up approximately one-third of the container's width for a balanced layout.
+} */
+
+/* media query */
+@media (max-width: 1000px) {
+    .service {
+        flex-basis: 45%; /* Each service takes up 45% of the container's width */
+    }
+    .caption{
+        padding: 5%;
+        height: 30vh;
+    }
+    .services-main h2{
+        font-size: 30px;
+    }
+    .services-main h3{
+        font-size: 20px;
+    }
+}
+@media (max-width: 800px) {
+    .services {
+        margin: 40px;
+    }
+    .service {
+        flex-basis: 100%; /* Each service takes up 100% of the container's width */
+    }
+    .caption{
+        padding: 10%;
+        height: 30vh;
+    }
+    .services-main h2{
+        font-size: 25px;
+    }
+    .services-main h3{
+        font-size: 18px;
+    }
+    .caption .icon{
+        width: 40px;
+        margin-bottom: 10px;
+    }
+    .caption .icon2{
+        width: 40px;
+        margin-bottom: 10px;
+    }
+    .caption .p1{
+        color: #4b5563; 
+        font-size: 20px;
+        text-align: left;
+        margin-bottom: 5%;
+    }
+    .caption .pp{
+        color: #4b5563; 
+        font-size: 18px;
+        text-align: left;
+    }
+}
+@media (max-width: 500px) {
+    .service {
+        flex-basis: 100%; /* Each service takes up 100% of the container's width */
+    }
+    .caption{
+        padding: 10%;
+        height: 30vh;
+    }
+    .services-main h2{
+        font-size: 20px;
+    }
+    .services-main h3{
+        font-size: 15px;
+    }
+    .caption .icon{
+        width: 30px;
+        margin-bottom: 10px;
+    }
+    .caption .icon2{
+        width: 30px;
+        margin-bottom: 10px;
+    }
+    .caption .p1{
+        color: #4b5563; 
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 5%;
+    }
+    .caption .pp{
+        color: #4b5563; 
+        font-size: 13px;
+        text-align: left;
+    }
+}

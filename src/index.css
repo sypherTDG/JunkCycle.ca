@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Outfit', sans-serif;
+}
+body{
+  background-color: #ffffff;
+}
+a{
+  text-decoration: none;
+  color: #ffffff;
+  line-height: 1;
+  cursor: pointer;
+}
+.container{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.btn{
+  background-color: #059669;
+  color: #ffffff;
+  border: 0;
+  outline: 0;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btnn{
+  background-color: #ffffff;
+  color: #059669;
+  border: 0;
+  outline: 0;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btn img{
+  width: 20px;
+  margin-left: 10px;
+}
+.btnn img{
+  width: 20px;
+  margin-left: 10px;
+}
+
+/* media querys for responsiveness */
+@media (max-width: 1200px) {
+  .container{
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn{
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

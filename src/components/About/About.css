@@ -1,0 +1,120 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 100px auto;
+}
+.about-left {
+    flex-basis:41%;
+}
+.about-right {
+    flex-basis: 55%;
+}
+.about_img {
+    width: 100%;
+    max-height: 550px;
+    display: block;
+}
+
+
+.about h3{
+    font-weight: 500;
+    font-size: 18px;
+    color: #059669;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+.about h2{
+    font-size: 35px;
+    font-weight: 700;
+    color: #047857;
+    margin: 10px 0;
+}
+.about p{
+    color: #4b5563;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.5;
+    /* text-align: justify; */
+}
+
+/* media query */
+@media (max-width: 900px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 25px;
+    }
+    .about-left, .about-right {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .about-left{
+        order: 2;
+    }
+    .about_img {
+        width: 100%;
+        max-height: 400px;
+        margin-bottom: 20px;
+    }
+    .about h3{
+        font-weight: 500;
+        font-size: 18px;
+        color: #059669;
+        margin: 10px 0;
+        text-transform: uppercase;
+    }
+    .about h2{
+        font-size: 25px;
+        font-weight: 700;
+        color: #047857;
+        margin: 10px 0;
+    }
+    .about p{
+        color: #4b5563;
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: left;
+    }
+}
+@media (max-width: 500px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 25px;
+        margin: 20px auto;
+    }
+    .about-left, .about-right {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .about_img {
+        width: 100%;
+        max-height: 400px;
+        margin-bottom: 20px;
+    }
+    .about h3{
+        font-weight: 500;
+        font-size: 15px;
+        color: #059669;
+        margin: 10px 0;
+        text-transform: uppercase;
+    }
+    .about h2{
+        font-size: 20px;
+        font-weight: 700;
+        color: #047857;
+        margin: 10px 0;
+    }
+    .about p{
+        color: #4b5563;
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: left;
+    }
+}

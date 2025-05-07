@@ -1,0 +1,138 @@
+.works{
+    margin: 80px auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /*Allows items to wrap to the next line if there's not enough space */
+    gap: 30px; /* Adds space between items */
+    justify-content: center; /*Centers items on the next line */
+
+}
+
+.works-main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: #eeeeee47;
+}
+.works-main h3{
+    font-weight: 500;
+    font-size: 18px;
+    color: #059669;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+.works-main h2{
+    font-size: 35px;
+    font-weight: 700;
+    color: #047857;
+    margin: 10px 0;
+}
+.work {
+    flex-basis: 31%; /* Each service takes up 30% of the container's width */
+    position: relative;
+}
+.caption1{
+    width: 100%;
+    height: 30vh;
+    display:flex;
+    flex-direction: column;
+    padding: 10%;
+    align-items: left;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+.caption1 .icon{
+    width: 40px;
+}
+
+.caption1 .p1{
+    color: #4b5563; 
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+.caption1 .pp{
+    color: #4b5563; 
+    font-size: 16px;
+    text-align: left;
+}
+.work:hover .caption1{
+    opacity: 10;
+    padding-top: 10%;
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+.work:hover img{
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+/* media query */
+@media (max-width: 760px) {
+    .works{
+        margin: 40px auto;}
+    .work {
+        flex-basis: 100%; /* Each service takes up 100% of the container's width */
+    }
+    .caption1{
+        padding: 10%;
+        height: 30vh;
+    }
+    .works-main h2{
+        font-size: 25px;
+    }
+    .works-main h3{
+        font-size: 18px;
+    }
+    .caption1 .icon{
+        width: 30px;
+        margin-bottom: 10px;
+    }
+
+    .caption1 .p1{
+        color: #4b5563; 
+        font-size: 20px;
+        text-align: left;
+        margin-bottom: 5%;
+    }
+    .caption1 .pp{
+        color: #4b5563; 
+        font-size: 18px;
+        text-align: left;
+    }
+}
+@media (max-width: 500px) {
+    .work {
+        flex-basis: 100%; /* Each service takes up 100% of the container's width */
+    }
+    .caption1{
+        padding: 10%;
+        height: 30vh;
+    }
+    .works-main h2{
+        font-size: 20px;
+    }
+    .works-main h3{
+        font-size: 15px;
+    }
+    .caption1 .icon{
+        width: 30px;
+        margin-bottom: 1px;
+    }
+
+    .caption1 .p1{
+        color: #4b5563; 
+        font-size: 16px;
+        text-align: left;
+        margin-bottom: 5%;
+    }
+    .caption1 .pp{
+        color: #4b5563; 
+        font-size: 13px;
+        text-align: left;
+    }
+}

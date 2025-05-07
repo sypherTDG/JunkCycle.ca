@@ -1,0 +1,154 @@
+nav {
+    width: 100%;
+    color: #047857;
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background-color: #047857; /*Add a background to ensure content doesn't show through
+    backdrop-filter: blur(1000px); /* Optional: Add a blur effect to the background */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition for background color and blur */
+}
+nav a{
+    color: #ffffff; /* Green text before scroll */
+}
+.logo{
+    width: 180px;
+    padding-left: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 20px;
+    font-size: 15px;
+}
+nav .btn{
+    background-color: #ffffff;
+    color: #047857;
+
+}
+.btn:hover{
+    background-color: #047857; /* Darker green */
+}
+.dark-nav{
+    background: #047857; /* Dark green background when scroll */
+    transition: 0.5s;
+    /* backdrop-filter: blur(10px); Optional: Add a blur effect to the background */
+}
+
+
+.menu-icon{
+    display: none;
+}
+
+.menu-closed {
+    display: none;
+  }
+
+
+
+/* media querys for responsiveness */
+
+@media (max-width: 1000px) {
+    .logo{
+        width: 140px;  
+
+    }
+    nav ul li{
+        margin: 10px 10px;
+        font-size: 13px;
+    }
+}
+@media (max-width: 840px) {
+    .logo{
+        width: 120px;
+        margin: 10px 0px;
+        padding-left: 0px;
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        background-color: #047857;
+        z-index: -1;
+        width: 200px;
+        padding-top: 70px;
+        transition: 0.5s;
+    }
+    nav .btn{
+        background-color: #ffffff;
+        color: #047857;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    nav a{
+        color: #ffffff;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px 40px;
+    }
+    .menu-icon{
+        display: block;
+        width: 30px;
+        /* margin-right: 20px; */
+        cursor: pointer;
+    }
+    .hide-mobile-menu{
+        right: -200px;
+    }
+}
+@media (max-width: 500px) {
+    .logo{
+        width: 120px;
+        margin: 10px 0;
+        padding-left: 0px;
+    }
+    nav ul{
+        position: fixed;
+        top: 0;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        background-color: #047857;
+        z-index: -1;
+        width: 200px;
+        padding-top: 70px;
+        transition: 0.5s;
+    }
+    nav .btn{
+        background-color: #ffffff;
+        color: #047857;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    nav a{
+        color: #ffffff;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px 40px;
+    }
+    .menu-icon{
+        display: block;
+        width: 30px;
+        /* margin-right: 20px; */
+        cursor: pointer;
+    }
+    .hide-mobile-menu{
+        right: -200px;
+    }
+}
