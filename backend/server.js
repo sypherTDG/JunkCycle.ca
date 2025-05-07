@@ -157,11 +157,11 @@ app.post('/api/waitlist', async (req, res) => {
       to: email,
       subject: 'Thanks for joining the JunkCycle Waitlist!',
       html: emailTemplate(firstname),
-      attachments: [{
-        filename: 'logo.svg',
-        path: path.join(__dirname, 'assets', 'logo.svg'),
-        cid: 'logo'
-      }]
+      // attachments: [{
+      //   filename: 'logo.svg',
+      //   path: path.join(__dirname, 'assets', 'logo.svg'),
+      //   cid: 'logo'
+      // }]
     });
 
     res.status(201).json({ message: "Waitlist entry saved successfully" });

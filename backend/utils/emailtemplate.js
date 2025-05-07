@@ -13,7 +13,7 @@ module.exports = (name) => `
       }
     </style>
     <div class="darkmode" style="text-align:center;">
-      <img src="cid:logo" alt="JunkCycle Logo" style="max-width:120px;margin-bottom:20px;" />
+      <img src="https://junkcycle.ca/logo.svg" alt="JunkCycle Logo" width="160" style="display:block;margin:auto;" />
       <h2 style="color:#047857;margin-bottom:8px;">Welcome to JunkCycle, ${name}!</h2>
       <p style="font-size:16px;">You're officially on the waitlist 🎉</p>
     </div>
