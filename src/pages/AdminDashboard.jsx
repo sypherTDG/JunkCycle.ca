@@ -21,7 +21,7 @@ const AdminDashboard = () => {
     }
 
     // Fetch waitlist entries
-    fetch('http://localhost:3000/api/waitlist', {
+    fetch("https://junkcycleca-production.up.railway.app/api/waitlist", {
       headers: {
         Authorization: `Bearer ${token}`
       }

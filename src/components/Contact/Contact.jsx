@@ -26,7 +26,7 @@ const Contact = () => {
       console.log(Object.fromEntries(formData.entries()));
 
       try {
-        const response = await fetch("http://localhost:3000/join-waitlist", {
+        const response = await fetch("https://junkcycleca-production.up.railway.app/api/waitlist", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
