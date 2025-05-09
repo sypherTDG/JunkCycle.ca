@@ -14,7 +14,7 @@ module.exports = (name) => `
     </style>
     <div class="darkmode" style="text-align:center;">
       <img
-        src="https://junkcycle.ca/logo-email.png"
+        src="https://junkcycle.ca/logo.png"
         alt="JunkCycle Logo"
         width="200"
         style="
