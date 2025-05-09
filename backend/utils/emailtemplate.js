@@ -52,7 +52,7 @@ module.exports = (name) => `
       <p style="font-size:12px;color:#6b7280;margin-bottom:8px;">
         Stay connected:
       </p>
-      <a href="https://instagram.com/junkcycle" style="margin:0 8px;" target="_blank">
+      <a href="https://www.instagram.com/hellojunkcycle/" style="margin:0 8px;" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/24/174/174855.png" alt="Instagram" width="24" />
       </a>
       <a href="https://www.linkedin.com/in/junk-cycle-31ba82362" style="margin:0 8px;" target="_blank">
