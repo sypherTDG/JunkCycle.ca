@@ -1,9 +1,9 @@
 module.exports = (name) => `
-  <div style="max-width:600px;margin:0 auto;padding:24px;font-family:Arial,sans-serif;border:1px solid #e0e0e0;border-radius:12px;background-color:#111827;color:#f3f4f6;box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+  <div style="max-width:600px;margin:0 auto;padding:24px;font-family:Arial,sans-serif;border:1px solid transparent;border-radius:12px;background-color:transparent;color:#f3f4f6;">
     <style>
       @media (prefers-color-scheme: dark) {
         body, .darkmode {
-          background-color: #111827 !important;
+          background-color: transparent !important;
           color: #f3f4f6 !important;
         }
         .btn {
@@ -46,9 +46,9 @@ module.exports = (name) => `
       </a>
     </div>
 
-    <hr style="margin:40px 0;border:none;border-top:1px solid #e5e7eb;">
+    <hr style="margin:40px 0;border:none;border-top:1px solid #374151;">
 
-    <div style="text-align:center;background:#1f2937;padding:16px;border-radius:8px;">
+    <div style="text-align:center;background-color:transparent;padding:16px;border-radius:8px;">
       <p style="font-size:12px;color:#9ca3af;margin-bottom:8px;">
         Stay connected:
       </p>
