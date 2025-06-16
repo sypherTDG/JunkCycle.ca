@@ -71,7 +71,7 @@ const Contact = () => {
                 <li><img src={x_icon} alt='X Icon' /> <a href="https://x.com/HelloJunkCycle" target="_blank" rel="noopener noreferrer">X</a></li> 
             </ul>
        </div>
-       <div className='contact-info'>
+       <div className='contact-info' id="waitlist">
         <h3>Join the Waitlist!!</h3>
         <form onSubmit={onSubmit}>
             <label><input type="text" name='firstname' placeholder='First Name' required autoComplete="given-name" pattern=".*\S.*" title="This field cannot be empty or contain only spaces" /></label>
