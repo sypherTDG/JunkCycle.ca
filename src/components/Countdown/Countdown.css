@@ -2,9 +2,6 @@
   text-align: center;
   padding: 2rem;
   background: #091e00;
-  /* color: #ffffff; */
-  /* text-align: center; */
-  padding: 2rem;
   min-height: 100vh;   
   display: flex;
   flex-direction: column;     
@@ -15,23 +12,39 @@
 }
 .countdown-header {
   background-color: #091e00;
-  padding: 1rem 0;
   color: #ffffff;
   width: 100%;
 }
 
 .countdown-footer {
   background-color: #091e00;
-  padding: 3rem 0;
   color: #A7F3D0;
   width: 100%;
+  padding: 0rem;
+
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 1000;
+
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  background-color: #091e00;
+  color: #A7F3D0;
 }
 .countdown-footer p {
   color: #A7F3D0;
+}
+
+.countdown-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .countdown-footer ul li {
@@ -41,7 +54,7 @@
 /* Countdown Timer */
 .timer {
   font-size: 6rem;
-  margin: 5rem 0;
+  margin: 2rem 0;
   display: flex;
   justify-content: center;
   color: #A7F3D0;
@@ -51,7 +64,7 @@
 .cta-button {
   background-color: #091e00;
   border-radius: 8px;
-  margin-top: 100px;
+  margin-top: 50px;
   color: #A7F3D0;
   border: 0;
   outline: 0;
@@ -64,18 +77,19 @@
 p {
   color: #ffffff;
   font-size: 1.5rem;
+  
 }
 
 h1 {
   color: #ffffff;
   font-size: 4rem;
-  margin-top: 1rem;
+
 }
 
 
 @media (max-width: 768px) {
   .timer {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   
   h1 {
@@ -96,11 +110,13 @@ h1 {
 }
 @media (max-width: 480px) {
   .timer {
-    font-size: 3rem;
+    font-size: 2.3rem;
+    gap: 0.5rem;
   }
   
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
+    
   }
   
   p {
@@ -114,7 +130,7 @@ h1 {
 }
 @media (max-width: 320px) {
   .timer {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
     gap: 0.5rem;
   }
 
