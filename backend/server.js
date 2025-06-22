@@ -16,7 +16,21 @@ const authenticateToken = require('./middleware/auth');
 // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const app = express();
-app.use(cors());
+const allowedOrigins = ['https://junkcycle.ca', 'http://localhost:5173'];
+
+const corsOptions = {
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Rate Limiter
