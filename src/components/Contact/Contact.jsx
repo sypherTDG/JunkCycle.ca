@@ -16,6 +16,8 @@ const Contact = () => {
     const [selectedProvince, setSelectedProvince] = React.useState('');
     const [cities, setCities] = React.useState([]);
 
+    const apiUrl = import.meta.env.VITE_API_URL;
+
     const onSubmit = async (event) => {
       event.preventDefault();
       setResult("Sending...");
@@ -26,7 +28,7 @@ const Contact = () => {
       console.log(Object.fromEntries(formData.entries()));
 
       try {
-        const response = await fetch("https://junkcycleca-production.up.railway.app/api/waitlist", {
+        const response = await fetch(`${apiUrl}/api/waitlist`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"

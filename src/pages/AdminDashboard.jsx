@@ -21,7 +21,8 @@ const AdminDashboard = () => {
     }
 
     // Fetch waitlist entries
-    fetch("https://junkcycleca-production.up.railway.app/api/waitlist", {
+    const apiUrl = import.meta.env.VITE_API_URL;
+    fetch(`${apiUrl}/api/waitlist`, {
       headers: {
         Authorization: `Bearer ${token}`
       }

@@ -8,7 +8,8 @@ const AdminLogin = () => {
     const password = e.target.password.value;
 
     try {
-      const res = await fetch('https://junkcycleca-production.up.railway.app/api/login', {
+      const apiUrl = import.meta.env.VITE_API_URL;
+      const res = await fetch(`${apiUrl}/api/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
