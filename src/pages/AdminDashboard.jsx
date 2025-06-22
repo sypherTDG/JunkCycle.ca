@@ -13,6 +13,11 @@ const AdminDashboard = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
 
+  const handleLogout = () => {
+    localStorage.removeItem('adminToken');
+    window.location.href = '/admin-login';
+  };
+
   useEffect(() => {
     const token = localStorage.getItem('adminToken');
     if (!token) {
@@ -20,7 +25,6 @@ const AdminDashboard = () => {
       return;
     }
 
-    // Fetch waitlist entries
     const apiUrl = import.meta.env.VITE_API_URL;
     fetch(`${apiUrl}/api/waitlist`, {
       headers: {
@@ -28,11 +32,19 @@ const AdminDashboard = () => {
       }
     })
       .then(res => {
-        if (!res.ok) throw new Error("Unauthorized");
+        if (res.status === 401 || res.status === 403) {
+          toast.error("Session expired. Please login again.");
+          handleLogout();
+          return;
+        }
+        if (!res.ok) throw new Error("Failed to fetch waitlist entries");
         return res.json();
       })
       .then(data => setEntries(data))
-      .catch(err => console.error('Fetch failed:', err));
+      .catch(err => {
+        console.error('Fetch failed:', err);
+        toast.error("Failed to load waitlist entries.");
+      });
 
     let warningTimeout, logoutTimeout;
 
@@ -70,7 +82,7 @@ const AdminDashboard = () => {
             draggable: false
           }
         );
-      }, 8 * 60 * 1000); // 9 minutes
+      }, 8 * 60 * 1000); // 8 minutes
 
       // Auto logout at 10 minutes
       logoutTimeout = setTimeout(() => {
@@ -78,19 +90,16 @@ const AdminDashboard = () => {
           position: "top-center",
           autoClose: 3000,
           onClose: () => {
-            localStorage.removeItem('adminToken');
-            window.location.href = '/admin-login';
+            handleLogout();
           }
         });
       }, 10 * 60 * 1000); // 10 minutes
     };
 
-    // Set initial timer and add listeners
     resetTimer();
     window.addEventListener('mousemove', resetTimer);
     window.addEventListener('keydown', resetTimer);
 
-    // Cleanup
     return () => {
       clearTimeout(warningTimeout);
       clearTimeout(logoutTimeout);
@@ -126,9 +135,6 @@ const AdminDashboard = () => {
   return (
     <div style={{ padding: "2rem" }}>
       <AdminHeader />
-      <CSVLink data={entries} headers={headers} filename="junkcycle-waitlist.csv">
-        <button>Download CSV</button>
-      </CSVLink>
       <div style={{ marginBottom: '1rem', display: 'flex', gap: '1rem' }}>
         <input
           type="text"
