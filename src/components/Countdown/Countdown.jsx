@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Countdown.css"; 
 import logo from '../../assets/JunkCycle-Logo1.svg';
 // import { Link } from "react-scroll"; // Ensure you have react-scroll installed
-import { Link } from "react-router-dom"; // Use this if you want to link to a different route
+import { Link, useNavigate } from "react-router-dom"; // Use this if you want to link to a different route
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
@@ -18,6 +18,12 @@ import Footer from "../Footer/Footer";
 
 export default function Countdown({ targetDate }) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  const navigate = useNavigate();
+
+  const handleJoin = () => {
+    navigate('/home');
+  };
 
   useEffect(() => {
     const updateCountdown = () => {
@@ -46,7 +52,7 @@ export default function Countdown({ targetDate }) {
         <Header />
       </div>
       <div className="countdown-content">
-        <h1>Countdown to Launch</h1>
+        <h1>Countdown to Pre-Launch</h1>
         <div className="timer">
           <span>{timeLeft.days}d</span>
           <span>{timeLeft.hours}h</span>
@@ -54,7 +60,7 @@ export default function Countdown({ targetDate }) {
           <span>{timeLeft.seconds}s</span>
         </div>
         <p>Join the waitlist to be among the first to try the app!</p>
-        <a href="/#waitlist" className="cta-button">Join Waitlist</a>
+        <button onClick={handleJoin} className="cta-button">Join Waitlist</button>
       </div>
 
       <div className="countdown-footer">

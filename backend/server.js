@@ -102,6 +102,11 @@ app.post('/join-waitlist', async (req, res) => {
   }
 });
 
+// Ping Route
+app.get('/api/ping', (req, res) => {
+  res.status(200).send('Pong 🏓');
+});
+
 // Start Server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

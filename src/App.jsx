@@ -23,6 +23,30 @@ const App = () => {
       {/* Define the routes for the application */}
       <Routes>
         <Route path="/" element={
+          new Date() < new Date('2025-07-01T00:00:00')
+            ? <Countdown targetDate="2025-07-01T00:00:00" />
+            : (
+              <>
+                <Navbar />
+                <Hero />
+                <About />
+                <Services />
+                <div className="container">
+                  <Title subtitle="TESTIMONIALS" title="What Our Client Say" />
+                  <Testimonials />
+                </div>
+                <Works />
+                <Choose />
+                <div className="container">
+                  <Title subtitle="Contact Us" title="Get in Touch" />
+                  <Contact />
+                  <Footer />
+                </div>
+              </>
+            )
+        } />
+
+        <Route path="/home" element={
           <>
             <Navbar />
             <Hero />
